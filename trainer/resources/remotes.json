@@ -1,0 +1,12 @@
+{
+	"download": [
+		{
+			"local": "nano_v8.pt",
+			"url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt"
+		},
+    {
+      "local": "fortnite_dataset.zip",
+      "url": "https://download1075.mediafire.com/ljwr5glw6sfgTelr8dGwxq7nSOcPVVUcRXjtDdpc1Z44se6G9WNTXfaqWe0u_24sR_QmE7ZBTkKc8TVOQ32PmIrOvPXJxjF2348sHoIMVLuDwNJ6ulAH9s7FXt52Pt01r9yG28CyaMcuX5G9SvvoAa12PaXGY04hAob-6akxhh8P/vskfs398fos1hps/fortnite_dataset.zip"
+    }
+	]
+}
