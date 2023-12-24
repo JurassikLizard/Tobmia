@@ -38,7 +38,7 @@ layout = [
                 key="-Strength-",
             ),
         ],
-        sg.Button("Toggle Aimbot"),
+        sg.Button("Toggle Aimbot", button_color=("white", "red")),
         sg.Button("Dropbot"),
         sg.Button("Apply"),
         sg.Button("Exit"),
@@ -71,9 +71,12 @@ while True:
         if on == False:
             on = True
             print("Aimbot on")
+            # set window color to green
+            window["Toggle Aimbot"].update(button_color=("white", "green"))
         else:
             on = False
             print("Aimbot off")
+            window["Toggle Aimbot"].update(button_color=("white", "red"))
 
     if event == "Dropbot":
         dropbot.drop_ui()
