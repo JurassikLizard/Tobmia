@@ -5,6 +5,9 @@ from ultralytics import YOLO
 import time
 import torch
 from screenshot import shot
+import os
+
+dirname = os.path.dirname(__file__)
 
 
 def modify_img(img):
@@ -43,8 +46,8 @@ def calculate_boxes(parts, model):
     return imgs
 
 
-img = cv2.imread("test2.webp")
-model = YOLO("best.pt")
+img = cv2.imread(dirname + r"\test2.webp")
+model = YOLO(dirname + r"\best.pt")
 model.conf = 0.4
 
 img = modify_img(img)
