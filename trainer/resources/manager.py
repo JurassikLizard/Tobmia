@@ -1,11 +1,27 @@
 import json
 from tqdm import tqdm
 import requests
+import zipfile
 import os
 from os import path
 
 def get_resource_names() -> list:
   return os.listdir(path.join(path.dirname(__file__), 'local/'))
+
+def get_resource_path(name) -> str:
+  return path.join(path.dirname(__file__), "local/"+name)
+
+def check_extension(file):
+  name = file.split('.')[0]
+  ext = file.split('.')[1]
+  
+  if ext == 'pt':
+    pass
+  elif ext == 'zip':
+    with zipfile.ZipFile(get_resource_path(file), 'r') as zip_ref:
+     zip_ref.extractall(get_resource_path(name + '/'))
+  else:
+    raise Exception('Unknown file extension in remotes!')
 
 def install_remotes() -> bool:
   current_dir = path.dirname(__file__)
@@ -42,7 +58,9 @@ def install_remotes() -> bool:
       
       # TODO: Use rich console
       if file_size != 0 and progress_bar.n != file_size:
-        print("ERROR, something went wrong")
+        raise Exception("ERROR, something went wrong downloading remote!")
+      
+      check_extension(remote['local'])
       
       # Remote done
       print('Done!')

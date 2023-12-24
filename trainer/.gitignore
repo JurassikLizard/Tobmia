@@ -1,6 +1,8 @@
 # Devloper added files:
 #
 local/
+runs/
+yolov8n.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
