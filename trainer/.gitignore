@@ -1,7 +1,7 @@
 # Devloper added files:
 #
 local/
-# runs/
+runs/
 yolov8n.pt
 
 # Byte-compiled / optimized / DLL files

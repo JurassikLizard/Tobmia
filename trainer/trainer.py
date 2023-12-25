@@ -18,9 +18,9 @@ def train_model():
   
   model = YOLO(manager.get_resource_path('nano_v8.pt'))
   model.info()
-  results = model.train(data=os.path.abspath('resources/local/fortnite_dataset/data.yaml'), 
+  results = model.train(data=os.path.abspath('resources/local/fortnite_dataset_small/data.yaml'), 
                         epochs=100, 
-                        imgsz=320, 
+                        imgsz=192, 
                         project=os.path.join(os.path.dirname(__file__), 'runs'),
                         name='run')
 

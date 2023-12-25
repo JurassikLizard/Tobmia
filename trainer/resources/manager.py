@@ -9,7 +9,7 @@ def get_resource_names() -> list:
   return os.listdir(path.join(path.dirname(__file__), 'local/'))
 
 def get_resource_path(name) -> str:
-  return path.join(path.dirname(__file__), "local/"+name)
+  return path.join(path.dirname(__file__), "local/"+name).replace("\\","/")
 
 def check_extension(file):
   name = file.split('.')[0]
@@ -23,6 +23,16 @@ def check_extension(file):
   else:
     raise Exception('Unknown file extension in remotes!')
 
+def manage_remote_item_groups(items):
+  out = []
+  for i in items:
+    if 'group' in i:
+      for j in i['download']:
+        j['local'] = i['group'] + '/' + j['local']
+        out.append(j)
+    else:
+      out.append(i)
+
 def install_remotes() -> bool:
   current_dir = path.dirname(__file__)
   remotes_file = path.join(current_dir, 'remotes.json')
@@ -30,7 +40,11 @@ def install_remotes() -> bool:
   
   with open(remotes_file, 'r') as data:
     remotes = json.load(data)
-    for remote in remotes['download']:
+    remote_items = remotes['download']
+    
+    remote_items = manage_remote_item_groups(remote_items)
+    
+    for remote in remote_items:
       # TODO: Use rich console
       print('Downloading remote: ' + remote['url'])
       

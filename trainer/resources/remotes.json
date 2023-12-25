@@ -7,6 +7,41 @@
     {
       "local": "fortnite_dataset.zip",
       "url": "https://download1075.mediafire.com/ljwr5glw6sfgTelr8dGwxq7nSOcPVVUcRXjtDdpc1Z44se6G9WNTXfaqWe0u_24sR_QmE7ZBTkKc8TVOQ32PmIrOvPXJxjF2348sHoIMVLuDwNJ6ulAH9s7FXt52Pt01r9yG28CyaMcuX5G9SvvoAa12PaXGY04hAob-6akxhh8P/vskfs398fos1hps/fortnite_dataset.zip"
+    },
+    {
+      "local": "fortnite_dataset_small.zip",
+      "url": "https://download1529.mediafire.com/48a0c5zak6wg3Di-RIH5256ZrUeCbh4Iz50hCo-Pbh3yWaO2uCaB3ISQnvQXbosEAInq7vznvRJa3ZYhCyFzHci_4UcdSwZLgTgC2K_ggfG_hDFPBnN2dqLH2IYcplbfyS1uSFk5GUQZk5ruJnot7tGuUPHk62IQ-6U7W4FyxmUP/bt9cuf5nrb8em48/fortnite_dataset_small.zip"
+    },
+    {
+      "group": "models",
+      "maybe_use_in_future(comment)": [
+        {
+        "local": "320model.torchscript",
+        "url": "https://www.dropbox.com/scl/fi/0a0oshvkp9onapvhaj5od/320model.torchscript?rlkey=lqrs67mqfiwsr9oyxn2tfhk5h&dl=1"
+        },
+        {
+          "local": "192model.torchscript",
+          "url": "https://www.dropbox.com/scl/fi/lhrvn9xtyb3y0sk4uzglm/192model.torchscript?rlkey=tod0lrhaa3fsr0syjmqwcnnwb&dl=1"
+        }
+      ],
+      "download": [
+        {
+          "local": "320model.pt",
+          "url": "https://www.dropbox.com/scl/fi/5jg22xowqr4mkosehbzgn/320model.pt?rlkey=si16ori4z8xrs6kx1ap00qlff&dl=1"
+        },
+        {
+          "local": "320model.onnx",
+          "url": "https://www.dropbox.com/scl/fi/6t69al5ycocoi0ea91fm7/320model.onnx?rlkey=7hrj52dg2gx77tsjjo6ljs1nr&dl=1"
+        },
+        {
+          "local": "192model.pt",
+          "url": "https://www.dropbox.com/scl/fi/f6nrobl3g8ek59m5hzg6f/192model.pt?rlkey=wap8my52ytgwzm4klu4w5a9n2&dl=1"
+        },
+        {
+          "local": "192model.onnx",
+          "url": "https://www.dropbox.com/scl/fi/sq3ulms4dgk77idfkh3o2/192model.onnx?rlkey=gv7gkehitykzucheq4k949df3&dl=1"
+        }
+      ]
     }
 	]
 }
