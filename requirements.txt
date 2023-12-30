@@ -7,3 +7,4 @@ tqdm==4.64.0
 ultralytics==8.0.216
 opencv-python==4.8.1.78
 screeninfo==0.8.1
+dxcam==0.0.5
